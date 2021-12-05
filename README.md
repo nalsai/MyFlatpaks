@@ -1,13 +1,15 @@
 # My Flatpaks
 
-[Flatpak Docs](https://docs.flatpak.org/)
+📦 [Flatpak Docs](https://docs.flatpak.org/)
+
+Don't forget to clone with `git clone --recursive` or run `git submodule update --init --recursive` if you forgot it.
 
 ## Installing
 
 You can install my repo like this:
 
 ```bash
-flatpak remote-add --if-not-exists flathub https://flatpak.nils.moe/NilsFlatpakRepo.flatpakrepo
+flatpak remote-add --if-not-exists NilsFlatpakRepo https://flatpak.nils.moe/NilsFlatpakRepo.flatpakrepo
 ```
 
 Then you can install Flatpaks from there like this:
@@ -57,6 +59,6 @@ rclone sync _/repo NilsVPS:/var/www/flatpak.nils.moe/repo --progress
 ### Update submodules
 
 ```bash
-git submodule update --remote --merge
+git submodule update --remote --merge --recursive
 ```
 
