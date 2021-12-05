@@ -1,0 +1,12 @@
+[submodule "SpekFlatpak"]
+	path = SpekFlatpak
+	url = git@github.com:Nalsai/SpekFlatpak.git
+[submodule "MothershipDefender2Flatpak"]
+	path = MothershipDefender2Flatpak
+	url = git@github.com:Nalsai/MothershipDefender2Flatpak.git
+[submodule "TacticalFlatpak"]
+	path = TacticalFlatpak
+	url = git@github.com:DaRealRoyal/TacticalFlatpak.git
+[submodule "AegisubFlatpak"]
+	path = AegisubFlatpak
+	url = git@github.com:Nalsai/AegisubFlatpak.git
