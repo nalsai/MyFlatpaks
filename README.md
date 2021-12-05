@@ -7,7 +7,7 @@
 You can install my repo like this:
 
 ```bash
-flatpak remote-add --if-not-exists flathub https://flatpak.nils.moe/NilsFlatpakRepo.flatpakrepo
+flatpak remote-add --if-not-exists NilsFlatpakRepo https://flatpak.nils.moe/NilsFlatpakRepo.flatpakrepo
 ```
 
 Then you can install Flatpaks from there like this:
