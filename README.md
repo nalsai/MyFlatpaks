@@ -1,6 +1,8 @@
 # My Flatpaks
 
-[Flatpak Docs](https://docs.flatpak.org/)
+📦 [Flatpak Docs](https://docs.flatpak.org/)
+
+Don't forget to clone with `git clone --recursive` or run `git submodule update --init --recursive` if you forgot it.
 
 ## Installing
 
@@ -57,6 +59,6 @@ rclone sync _/repo NilsVPS:/var/www/flatpak.nils.moe/repo --progress
 ### Update submodules
 
 ```bash
-git submodule update --remote --merge
+git submodule update --remote --merge --recursive
 ```
 
