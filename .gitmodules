@@ -10,3 +10,6 @@
 [submodule "AegisubFlatpak"]
 	path = AegisubFlatpak
 	url = git@github.com:Nalsai/AegisubFlatpak.git
+[submodule "gMKVExtractGUIFlatpak"]
+	path = gMKVExtractGUIFlatpak
+	url = git@github.com:Nalsai/gMKVExtractGUIFlatpak.git

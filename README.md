@@ -2,7 +2,7 @@
 
 📦 [Flatpak Docs](https://docs.flatpak.org/)
 
-Don't forget to clone with `git clone --recursive` or run `git submodule update --init --recursive` if you forgot it.
+Run `git submodule update --init --remote --merge --recursive` after cloning to clone the submodules and update them.
 
 ## Installing
 
@@ -18,7 +18,7 @@ Then you can install Flatpaks from there like this:
 flatpak install NilsFlatpakRepo com.DaRealRoyal.TacticalMathReturns
 ```
 
-Available Flatpaks are `org.wangqr.Aegisub`, `de.Nalsai.MothershipDefender2`, `cc.spek.Spek` and `com.DaRealRoyal.TacticalMathReturns`.
+Available Flatpaks are `org.wangqr.Aegisub`, `de.Nalsai.MothershipDefender2`, `cc.spek.Spek`, `com.DaRealRoyal.TacticalMathReturns` and `net.sourceforge.gMKVExtractGUI`.
 
 ## Development
 
@@ -45,8 +45,9 @@ flatpak build-bundle repo hello.flatpak org.flatpak.Hello stable --runtime-repo=
 
 ```bash
 flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/Aegisub AegisubFlatpak/org.wangqr.Aegisub.yml
+flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/gMKVExtractGUI gMKVExtractGUIFlatpak/net.sourceforge.gMKVExtractGUI.yml
 flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/MD2 MothershipDefender2Flatpak/de.Nalsai.MothershipDefender2.yml
-flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/MD2 SpekFlatpak/cc.spek.Spek.yml
+flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/Spek SpekFlatpak/cc.spek.Spek.yml
 flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/TMR TacticalFlatpak/com.DaRealRoyal.TacticalMathReturns.yml
 ```
 
@@ -61,4 +62,3 @@ rclone sync _/repo NilsVPS:/var/www/flatpak.nils.moe/repo --progress
 ```bash
 git submodule update --remote --merge --recursive
 ```
-
