@@ -13,3 +13,6 @@
 [submodule "gMKVExtractGUIFlatpak"]
 	path = gMKVExtractGUIFlatpak
 	url = git@github.com:Nalsai/gMKVExtractGUIFlatpak.git
+[submodule "mkv-extractor-qt5-flatpak"]
+	path = mkv-extractor-qt5-flatpak
+	url = git@github.com:Nalsai/mkv-extractor-qt5-flatpak.git
