@@ -18,7 +18,7 @@ Then you can install Flatpaks from there like this:
 flatpak install NilsFlatpakRepo com.DaRealRoyal.TacticalMathReturns
 ```
 
-Available Flatpaks are `org.wangqr.Aegisub`, `de.Nalsai.MothershipDefender2`, `cc.spek.Spek`, `com.DaRealRoyal.TacticalMathReturns` and `net.sourceforge.gMKVExtractGUI`.
+Available Flatpaks are `org.wangqr.Aegisub`, `de.Nalsai.MothershipDefender2`, `cc.spek.Spek`, `com.DaRealRoyal.TacticalMathReturns`, `com.github.mkv-extractor-qt5` and `net.sourceforge.gMKVExtractGUI`.
 
 ## Development
 
@@ -46,6 +46,7 @@ flatpak build-bundle repo hello.flatpak org.flatpak.Hello stable --runtime-repo=
 ```bash
 flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/Aegisub AegisubFlatpak/org.wangqr.Aegisub.yml
 flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/gMKVExtractGUI gMKVExtractGUIFlatpak/net.sourceforge.gMKVExtractGUI.yml
+flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/mkv-extractor-qt5 mkv-extractor-qt5-flatpak/com.github.mkv-extractor-qt5.yml
 flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/MD2 MothershipDefender2Flatpak/de.Nalsai.MothershipDefender2.yml
 flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/Spek SpekFlatpak/cc.spek.Spek.yml
 flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/TMR TacticalFlatpak/com.DaRealRoyal.TacticalMathReturns.yml
