@@ -16,3 +16,6 @@
 [submodule "mkv-extractor-qt5-flatpak"]
 	path = mkv-extractor-qt5-flatpak
 	url = git@github.com:Nalsai/mkv-extractor-qt5-flatpak.git
+[submodule "summarizer"]
+	path = summarizer
+	url = git@github.com:Nalsai/summarizer.git

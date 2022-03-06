@@ -18,7 +18,7 @@ Then you can install Flatpaks from there like this:
 flatpak install NilsFlatpakRepo com.DaRealRoyal.TacticalMathReturns
 ```
 
-Available Flatpaks are `org.wangqr.Aegisub`, `de.Nalsai.MothershipDefender2`, `cc.spek.Spek`, `com.DaRealRoyal.TacticalMathReturns`, `com.github.mkv-extractor-qt5` and `net.sourceforge.gMKVExtractGUI`.
+Available Flatpaks are `org.wangqr.Aegisub`, `de.haigruppe.summarizer`, `de.Nalsai.MothershipDefender2`, `cc.spek.Spek`, `com.DaRealRoyal.TacticalMathReturns`, `com.github.mkv-extractor-qt5` and `net.sourceforge.gMKVExtractGUI`.
 
 ## Development
 
@@ -26,7 +26,7 @@ Available Flatpaks are `org.wangqr.Aegisub`, `de.Nalsai.MothershipDefender2`, `c
 
 ```bash
 cd HelloFlatpak
-flatpak-builder --force-clean build-dir org.flatpak.Hello.yml
+flatpak-builder --install-deps-from=flathub --force-clean build-dir org.flatpak.Hello.yml
 flatpak-builder --user --install --force-clean build-dir org.flatpak.Hello.yml
 flatpak run org.flatpak.Hello
 ```
@@ -35,31 +35,6 @@ flatpak run org.flatpak.Hello
 
 ```bash
 cd HelloFlatpak
-flatpak-builder --repo=repo --force-clean build-dir org.flatpak.Hello.yml
+flatpak-builder --install-deps-from=flathub --force-clean --repo=repo build-dir org.flatpak.Hello.yml
 flatpak build-bundle repo hello.flatpak org.flatpak.Hello stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
-```
-
-### Make Repo
-
-#### Build
-
-```bash
-flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/Aegisub AegisubFlatpak/org.wangqr.Aegisub.yml
-flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/gMKVExtractGUI gMKVExtractGUIFlatpak/net.sourceforge.gMKVExtractGUI.yml
-flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/mkv-extractor-qt5 mkv-extractor-qt5-flatpak/com.github.mkv-extractor-qt5.yml
-flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/MD2 MothershipDefender2Flatpak/de.Nalsai.MothershipDefender2.yml
-flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/Spek SpekFlatpak/cc.spek.Spek.yml
-flatpak-builder --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/TMR TacticalFlatpak/com.DaRealRoyal.TacticalMathReturns.yml
-```
-
-#### Upload
-
-```bash
-rclone sync _/repo NilsVPS:/var/www/flatpak.nils.moe/repo --progress
-```
-
-### Update submodules
-
-```bash
-git submodule update --remote --merge --recursive
 ```
