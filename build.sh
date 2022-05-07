@@ -74,7 +74,7 @@ if echo "$answer" | grep -iq "^y" ;then
   CheckSuccess
   flatpak build-bundle _/repo _/bundles/com.github.mkv-extractor-qt5.flatpak com.github.mkv-extractor-qt5 stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
   CheckSuccess
-  flatpak build-bundle _/repo _/bundles/net.sourceforge.gMKVExtractGUI net.sourceforge.gMKVExtractGUI stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
+  flatpak build-bundle _/repo _/bundles/net.sourceforge.gMKVExtractGUI.flatpak net.sourceforge.gMKVExtractGUI stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
   CheckSuccess
 else
   echo n
