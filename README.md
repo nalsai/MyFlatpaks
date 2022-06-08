@@ -18,7 +18,7 @@ Then you can install Flatpaks from there like this:
 flatpak install NilsFlatpakRepo com.DaRealRoyal.TacticalMathReturns
 ```
 
-Available Flatpaks are `org.wangqr.Aegisub`, `de.haigruppe.summarizer`, `de.Nalsai.MothershipDefender2`, `cc.spek.Spek`, `com.DaRealRoyal.TacticalMathReturns`, `com.github.mkv-extractor-qt5` and `net.sourceforge.gMKVExtractGUI`.
+Available Flatpaks are `org.wangqr.Aegisub`, `de.haigruppe.summarizer`, `de.Nalsai.MothershipDefender2`, `cc.spek.Spek`, `com.DaRealRoyal.TacticalMathReturns`, `com.github.mkv-extractor-qt5`, `gg.minion.Minion` and `net.sourceforge.gMKVExtractGUI`.
 
 ## Development
 

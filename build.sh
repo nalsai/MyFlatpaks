@@ -28,11 +28,12 @@ if echo "$answer" | grep -iq "^y" ;then
   flatpak install https://dl.flathub.org/repo/appstream/org.flathub.flatpak-external-data-checker.flatpakref
   flatpak run org.flathub.flatpak-external-data-checker AegisubFlatpak/org.wangqr.Aegisub.yml; echo
   flatpak run org.flathub.flatpak-external-data-checker gMKVExtractGUIFlatpak/net.sourceforge.gMKVExtractGUI.yml; echo
+  flatpak run org.flathub.flatpak-external-data-checker MinionFlatpak/gg.minion.Minion.yml; echo
   flatpak run org.flathub.flatpak-external-data-checker mkv-extractor-qt5-flatpak/com.github.mkv-extractor-qt5.yml; echo
-  #flatpak run org.flathub.flatpak-external-data-checker MothershipDefender2Flatpak/de.Nalsai.MothershipDefender2.yml; echo
+  flatpak run org.flathub.flatpak-external-data-checker MothershipDefender2Flatpak/de.Nalsai.MothershipDefender2.yml; echo
   flatpak run org.flathub.flatpak-external-data-checker SpekFlatpak/cc.spek.Spek.yml; echo
   flatpak run org.flathub.flatpak-external-data-checker summarizer/de.haigruppe.summarizer.json; echo
-  #flatpak run org.flathub.flatpak-external-data-checker TacticalFlatpak/com.DaRealRoyal.TacticalMathReturns.yml; echo
+  flatpak run org.flathub.flatpak-external-data-checker TacticalFlatpak/com.DaRealRoyal.TacticalMathReturns.yml; echo
   read -rsp "Press enter to continue "
   echo
 else
@@ -42,6 +43,8 @@ fi
 flatpak-builder --install-deps-from=flathub --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/Aegisub AegisubFlatpak/org.wangqr.Aegisub.yml
 CheckSuccess
 flatpak-builder --install-deps-from=flathub --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/gMKVExtractGUI gMKVExtractGUIFlatpak/net.sourceforge.gMKVExtractGUI.yml
+CheckSuccess
+flatpak-builder --install-deps-from=flathub --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/Minion MinionFlatpak/gg.minion.Minion.yml
 CheckSuccess
 flatpak-builder --install-deps-from=flathub --gpg-sign=7E56B236E04AD5F0 --repo=_/repo --force-clean _/build/mkv-extractor-qt5 mkv-extractor-qt5-flatpak/com.github.mkv-extractor-qt5.yml
 CheckSuccess
@@ -64,17 +67,19 @@ if echo "$answer" | grep -iq "^y" ;then
   echo y
   flatpak build-bundle _/repo _/bundles/org.wangqr.Aegisub.flatpak org.wangqr.Aegisub stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
   CheckSuccess
-  flatpak build-bundle _/repo _/bundles/de.haigruppe.summarizer.flatpak de.haigruppe.summarizer stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
+  flatpak build-bundle _/repo _/bundles/net.sourceforge.gMKVExtractGUI.flatpak net.sourceforge.gMKVExtractGUI stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
+  CheckSuccess
+  flatpak build-bundle _/repo _/bundles/gg.minion.Minion.flatpak gg.minion.Minion stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
+  CheckSuccess
+  flatpak build-bundle _/repo _/bundles/com.github.mkv-extractor-qt5.flatpak com.github.mkv-extractor-qt5 stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
   CheckSuccess
   flatpak build-bundle _/repo _/bundles/de.Nalsai.MothershipDefender2.flatpak de.Nalsai.MothershipDefender2 stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
   CheckSuccess
   flatpak build-bundle _/repo _/bundles/cc.spek.Spek.flatpak cc.spek.Spek stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
   CheckSuccess
+  flatpak build-bundle _/repo _/bundles/de.haigruppe.summarizer.flatpak de.haigruppe.summarizer stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
+  CheckSuccess
   flatpak build-bundle _/repo _/bundles/com.DaRealRoyal.TacticalMathReturns.flatpak com.DaRealRoyal.TacticalMathReturns stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
-  CheckSuccess
-  flatpak build-bundle _/repo _/bundles/com.github.mkv-extractor-qt5.flatpak com.github.mkv-extractor-qt5 stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
-  CheckSuccess
-  flatpak build-bundle _/repo _/bundles/net.sourceforge.gMKVExtractGUI.flatpak net.sourceforge.gMKVExtractGUI stable --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
   CheckSuccess
 else
   echo n
