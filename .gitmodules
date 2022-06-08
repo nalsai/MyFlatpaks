@@ -19,3 +19,6 @@
 [submodule "summarizer"]
 	path = summarizer
 	url = git@github.com:Nalsai/summarizer.git
+[submodule "MinionFlatpak"]
+	path = MinionFlatpak
+	url = git@github.com:Nalsai/MinionFlatpak.git
