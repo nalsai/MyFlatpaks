@@ -1,0 +1,37 @@
+name: 'Sync Submodules'
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * *'
+
+jobs:
+  sync-submodules:
+    name: 'Sync submodules'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.NALSAIBOT_TOKEN }}
+        submodules: true
+    - name: Update submodules
+      run: |
+        git pull --recurse-submodules
+        git submodule update --remote --recursive
+    - name: Commit update
+      run: |
+        git config --global user.name 'NalsaiBot'
+        git config --global user.email 'bot@nalsai.de'
+        git remote set-url origin https://x-access-token:${{ secrets.NALSAIBOT_TOKEN }}@github.com/${{ github.repository }}
+        git commit -am "Update submodules" && git push || echo "No changes to commit"
+    - uses: gautamkrishnar/keepalive-workflow@master
+      with:
+        gh_token: ${{ secrets.NALSAIBOT_TOKEN }}
+        commit_message: Keep the repository active (automated keepalive workflow)
+        committer_username: NalsaiBot
+        committer_email: bot@nalsai.de
+
