@@ -3,7 +3,7 @@ name: 'Sync Submodules'
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 12 * * *'
+    - cron: '0 2 * * *'
 
 jobs:
   sync-submodules:
@@ -28,10 +28,3 @@ jobs:
         git config --global user.email 'bot@nalsai.de'
         git remote set-url origin https://x-access-token:${{ secrets.NALSAIBOT_TOKEN }}@github.com/${{ github.repository }}
         git commit -am "Update submodules" && git push || echo "No changes to commit"
-    - uses: gautamkrishnar/keepalive-workflow@master
-      with:
-        gh_token: ${{ secrets.NALSAIBOT_TOKEN }}
-        commit_message: Keep the repository active (automated keepalive workflow)
-        committer_username: NalsaiBot
-        committer_email: bot@nalsai.de
-
