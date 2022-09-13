@@ -1,0 +1,17 @@
+name: 'Keep the repository active'
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+
+jobs:
+  flathub-data-checker-global:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: gautamkrishnar/keepalive-workflow@master
+      with:
+        gh_token: ${{ secrets.NALSAIBOT_TOKEN }}
+        commit_message: Keep the repository active
+        committer_username: NalsaiBot
+        committer_email: bot@nalsai.de
