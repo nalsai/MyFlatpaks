@@ -9,7 +9,7 @@ Run `git submodule update --init --remote --merge --recursive` after cloning to 
 You can install my repo like this:
 
 ```bash
-flatpak remote-add --if-not-exists NilsFlatpakRepo https://flatpak.nils.moe/NilsFlatpakRepo.flatpakrepo
+flatpak remote-add --if-not-exists NilsFlatpakRepo https://flatpak.nils.moe/repo/NilsFlatpakRepo.flatpakrepo
 ```
 
 Then you can install Flatpaks from there like this:
