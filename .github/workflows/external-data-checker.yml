@@ -1,14 +1,19 @@
-name: 'Check if external data changed'
+name: "Check if external data changed"
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: "30 */6 * * *"
 
 jobs:
-  flathub-data-checker-global:
+  flatpak-data-checker:
     runs-on: ubuntu-latest
     steps:
-    - uses: nalsai/myflatpaks/.external-data-checker@main
-      env:
-        GITHUB_TOKEN: ${{ secrets.NALSAIBOT_TOKEN }}
+      - uses: nalsai/myflatpaks/.external-data-checker@main
+        env:
+          GIT_AUTHOR_NAME: NalsaiBot
+          GIT_COMMITTER_NAME: NalsaiBot
+          GIT_AUTHOR_EMAIL: bot@nalsai.de
+          GIT_COMMITTER_EMAIL: bot@nalsai.de
+          EMAIL: bot@nalsai.de
+          GITHUB_TOKEN: ${{ secrets.NALSAIBOT_TOKEN }}
