@@ -11,9 +11,4 @@ jobs:
     steps:
       - uses: nalsai/myflatpaks/.external-data-checker@main
         env:
-          GIT_AUTHOR_NAME: NalsaiBot
-          GIT_COMMITTER_NAME: NalsaiBot
-          GIT_AUTHOR_EMAIL: bot@nalsai.de
-          GIT_COMMITTER_EMAIL: bot@nalsai.de
-          EMAIL: bot@nalsai.de
           GITHUB_TOKEN: ${{ secrets.NALSAIBOT_TOKEN }}
