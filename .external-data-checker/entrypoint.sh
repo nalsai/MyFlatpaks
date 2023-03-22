@@ -22,7 +22,7 @@ manifest["https://github.com/Nalsai/mkv-extractor-qt5-flatpak"]="com.github.mkv-
 manifest["https://github.com/Nalsai/summarizer"]="de.haigruppe.summarizer.json"
 
 for m in "${!manifest[@]}"; do
-    git clone --depth 1 $m
+    git clone $m
     printf "==> checking %s in %s\n" "${manifest[$m]}" "$m"
     /app/flatpak-external-data-checker --update $(echo $m | sed 's:.*/::')/${manifest[$m]}
 done
