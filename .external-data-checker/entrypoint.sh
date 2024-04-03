@@ -13,7 +13,6 @@ cd repos
 
 declare -A manifest
 manifest["https://github.com/Nalsai/AegisubFlatpak"]="org.wangqr.Aegisub.yml"
-manifest["https://github.com/Nalsai/MinionFlatpak"]="gg.minion.Minion.yml"
 manifest["https://github.com/Nalsai/MothershipDefender2Flatpak"]="de.Nalsai.MothershipDefender2.yml"
 manifest["https://github.com/Nalsai/SpekFlatpak"]="cc.spek.Spek.yml"
 manifest["https://github.com/DaRealRoyal/TacticalFlatpak"]="com.DaRealRoyal.TacticalMathReturns.yml"
