@@ -18,7 +18,7 @@ manifest["https://github.com/Nalsai/SpekFlatpak"]="cc.spek.Spek.yml"
 manifest["https://github.com/DaRealRoyal/TacticalFlatpak"]="com.DaRealRoyal.TacticalMathReturns.yml"
 manifest["https://github.com/Nalsai/gMKVExtractGUIFlatpak"]="net.sourceforge.gMKVExtractGUI.yml"
 manifest["https://github.com/Nalsai/mkv-extractor-qt5-flatpak"]="com.github.mkv-extractor-qt5.yml"
-manifest["https://github.com/Nalsai/summarizer"]="de.haigruppe.summarizer.json"
+#manifest["https://github.com/Nalsai/summarizer"]="de.haigruppe.summarizer.json"
 
 for m in "${!manifest[@]}"; do
     git clone $m
