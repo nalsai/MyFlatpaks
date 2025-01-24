@@ -12,9 +12,9 @@ mkdir repos
 cd repos
 
 declare -A manifest
-manifest["https://github.com/Nalsai/AegisubFlatpak"]="org.wangqr.Aegisub.yml"
+#manifest["https://github.com/Nalsai/AegisubFlatpak"]="org.wangqr.Aegisub.yml"
 manifest["https://github.com/Nalsai/MothershipDefender2Flatpak"]="de.Nalsai.MothershipDefender2.yml"
-manifest["https://github.com/Nalsai/SpekFlatpak"]="cc.spek.Spek.yml"
+#manifest["https://github.com/Nalsai/SpekFlatpak"]="cc.spek.Spek.yml"
 manifest["https://github.com/DaRealRoyal/TacticalFlatpak"]="com.DaRealRoyal.TacticalMathReturns.yml"
 manifest["https://github.com/Nalsai/gMKVExtractGUIFlatpak"]="net.sourceforge.gMKVExtractGUI.yml"
 manifest["https://github.com/Nalsai/mkv-extractor-qt5-flatpak"]="com.github.mkv-extractor-qt5.yml"
