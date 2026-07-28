@@ -12,13 +12,13 @@ mkdir repos
 cd repos
 
 declare -A manifest
-#manifest["https://github.com/Nalsai/AegisubFlatpak"]="org.wangqr.Aegisub.yml"
-manifest["https://github.com/Nalsai/MothershipDefender2Flatpak"]="de.Nalsai.MothershipDefender2.yml"
-#manifest["https://github.com/Nalsai/SpekFlatpak"]="cc.spek.Spek.yml"
+#manifest["https://github.com/nalsai/AegisubFlatpak"]="org.wangqr.Aegisub.yml"
+manifest["https://github.com/nalsai/MothershipDefender2Flatpak"]="de.Nalsai.MothershipDefender2.yml"
+#manifest["https://github.com/nalsai/SpekFlatpak"]="cc.spek.Spek.yml"
 manifest["https://github.com/DaRealRoyal/TacticalFlatpak"]="com.DaRealRoyal.TacticalMathReturns.yml"
-manifest["https://github.com/Nalsai/gMKVExtractGUIFlatpak"]="net.sourceforge.gMKVExtractGUI.yml"
-manifest["https://github.com/Nalsai/mkv-extractor-qt5-flatpak"]="com.github.mkv-extractor-qt5.yml"
-#manifest["https://github.com/Nalsai/summarizer"]="de.haigruppe.summarizer.json"
+manifest["https://github.com/nalsai/gMKVExtractGUIFlatpak"]="net.sourceforge.gMKVExtractGUI.yml"
+#manifest["https://github.com/nalsai/mkv-extractor-qt5-flatpak"]="com.github.mkv-extractor-qt5.yml"
+#manifest["https://github.com/nalsai/summarizer"]="de.haigruppe.summarizer.json"
 
 for m in "${!manifest[@]}"; do
     git clone $m
