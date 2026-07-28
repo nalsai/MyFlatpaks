@@ -9,16 +9,24 @@ Run `git submodule update --init --remote --merge --recursive` after cloning to 
 You can install my repo like this:
 
 ```bash
-flatpak remote-add --if-not-exists NilsFlatpakRepo https://flatpak.nils.moe/repo/NilsFlatpakRepo.flatpakrepo
+flatpak remote-add --if-not-exists nalsai https://flatpak.nils.moe/repo/nalsai.flatpakrepo
 ```
 
 Then you can install Flatpaks from there like this:
 
 ```bash
-flatpak install NilsFlatpakRepo com.DaRealRoyal.TacticalMathReturns
+flatpak install nalsai de.Nalsai.MothershipDefender2
 ```
 
-Available Flatpaks are `org.wangqr.Aegisub`, `de.haigruppe.summarizer`, `de.Nalsai.MothershipDefender2`, `cc.spek.Spek`, `com.DaRealRoyal.TacticalMathReturns`, `com.github.mkv-extractor-qt5` and `net.sourceforge.gMKVExtractGUI`.
+Available Flatpaks are:
+
+- `de.haigruppe.summarizer`
+- `de.Nalsai.MothershipDefender2`
+- `com.DaRealRoyal.TacticalMathReturns`
+- `com.github.mkv-extractor-qt5`
+- `net.sourceforge.gMKVExtractGUI`
+
+`org.wangqr.Aegisub` and `cc.spek.Spek` are also available, but they are no longer maintained as they are on flathub (as `org.aegisub.Aegisub` and `cc.spek.Spek`). You can install them from there if you want.
 
 ## Development
 
