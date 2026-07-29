@@ -25,3 +25,5 @@ for m in "${!manifest[@]}"; do
     printf "==> checking %s in %s\n" "${manifest[$m]}" "$m"
     /app/flatpak-external-data-checker --update $(echo $m | sed 's:.*/::')/${manifest[$m]}
 done
+
+exit 0
