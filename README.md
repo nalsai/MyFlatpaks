@@ -20,13 +20,12 @@ flatpak install nalsai de.Nalsai.MothershipDefender2
 
 Available Flatpaks are:
 
-- `de.haigruppe.summarizer`
 - `de.Nalsai.MothershipDefender2`
 - `com.DaRealRoyal.TacticalMathReturns`
-- `com.github.mkv-extractor-qt5`
+- `com.github.mkv-extractor-qt6`
 - `net.sourceforge.gMKVExtractGUI`
 
-`org.wangqr.Aegisub` and `cc.spek.Spek` are also available, but they are no longer maintained as they are on flathub (as `org.aegisub.Aegisub` and `cc.spek.Spek`). You can install them from there if you want.
+`de.haigruppe.summarizer`, `com.github.mkv-extractor-qt6`, `org.wangqr.Aegisub` and `cc.spek.Spek` are also available but no longer maintained.
 
 ## Development
 

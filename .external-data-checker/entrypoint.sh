@@ -12,11 +12,14 @@ mkdir repos
 cd repos
 
 declare -A manifest
-#manifest["https://github.com/nalsai/AegisubFlatpak"]="org.wangqr.Aegisub.yml"
 manifest["https://github.com/nalsai/MothershipDefender2Flatpak"]="de.Nalsai.MothershipDefender2.yml"
-#manifest["https://github.com/nalsai/SpekFlatpak"]="cc.spek.Spek.yml"
 manifest["https://github.com/DaRealRoyal/TacticalFlatpak"]="com.DaRealRoyal.TacticalMathReturns.yml"
 manifest["https://github.com/nalsai/gMKVExtractGUIFlatpak"]="net.sourceforge.gMKVExtractGUI.yml"
+manifest["https://github.com/nalsai/MKV-Extractor-Qt6-Flatpak"]="com.github.mkv-extractor-qt6.yml"
+
+# Deprecated
+#manifest["https://github.com/nalsai/AegisubFlatpak"]="org.wangqr.Aegisub.yml"
+#manifest["https://github.com/nalsai/SpekFlatpak"]="cc.spek.Spek.yml"
 #manifest["https://github.com/nalsai/mkv-extractor-qt5-flatpak"]="com.github.mkv-extractor-qt5.yml"
 #manifest["https://github.com/nalsai/summarizer"]="de.haigruppe.summarizer.json"
 

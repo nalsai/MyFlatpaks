@@ -22,3 +22,6 @@
 [submodule "MinionFlatpak"]
 	path = MinionFlatpak
 	url = git@github.com:Nalsai/MinionFlatpak.git
+[submodule "MKV-Extractor-Qt6-Flatpak"]
+	path = MKV-Extractor-Qt6-Flatpak
+	url = git@github.com:nalsai/MKV-Extractor-Qt6-Flatpak.git
